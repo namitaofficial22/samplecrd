@@ -1,0 +1,14 @@
+apiVersion: mobilecoregrp.my.domain/v1
+kind: Mymobilecorenwkind
+metadata:
+  labels:
+    app.kubernetes.io/name: mymobilecorenwkind
+    app.kubernetes.io/instance: mymobilecorenwkind-sample
+    app.kubernetes.io/part-of: mymobilecorenw
+    app.kuberentes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: mymobilecorenw
+  name: mymobilecorenwkind-sample
+spec:
+  # Add fields here
+  4gRadio: true
+  5gRadio: false

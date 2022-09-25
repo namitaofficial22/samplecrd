@@ -1,0 +1,27 @@
+# permissions for end users to view mymobilecorenwkinds.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: mymobilecorenwkind-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: mymobilecorenw
+    app.kubernetes.io/part-of: mymobilecorenw
+    app.kubernetes.io/managed-by: kustomize
+  name: mymobilecorenwkind-viewer-role
+rules:
+- apiGroups:
+  - mobilecoregrp.my.domain
+  resources:
+  - mymobilecorenwkinds
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - mobilecoregrp.my.domain
+  resources:
+  - mymobilecorenwkinds/status
+  verbs:
+  - get

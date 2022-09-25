@@ -1,0 +1,16 @@
+domain: my.domain
+layout:
+- go.kubebuilder.io/v3
+projectName: mymobilecorenw
+repo: my.domain/mymobilecorenw
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: my.domain
+  group: mobilecoregrp
+  kind: Mymobilecorenwkind
+  path: my.domain/mymobilecorenw/api/v1
+  version: v1
+version: "3"
